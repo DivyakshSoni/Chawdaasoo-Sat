@@ -29,7 +29,7 @@ export default function PersonalizeDrawer({ config, onSaveConfig, onResetConfig,
 
     const updatedConfig = {
       ...config,
-      recipientName: formData.recipientName.trim() || 'you',
+      recipientName: formData.recipientName.trim() || "Mahi Ma'am",
       senderName: formData.senderName.trim() || 'Someone who is trying to do better',
       senderSignature: formData.senderSignature.trim() || 'With sincerity,\nSomeone who is trying to do better.',
       senderPhone: formData.senderPhone.trim(),
@@ -76,11 +76,11 @@ export default function PersonalizeDrawer({ config, onSaveConfig, onResetConfig,
             <input 
               type="text"
               className="form-input"
-              placeholder="e.g. Maya, Emma, or 'you'"
+              placeholder="e.g. Mahi Ma'am"
               value={formData.recipientName}
               onChange={(e) => handleChange('recipientName', e.target.value)}
             />
-            <span className="form-hint">Replaces 'you' in salutations and personal headings.</span>
+            <span className="form-hint">Shown in the opening heading and letter salutation.</span>
           </div>
 
           {/* Sender Name / Signature */}

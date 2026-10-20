@@ -55,7 +55,7 @@ export default function LetterChapter({ config, onNextChapter }) {
           {/* Salutation */}
           <div className="letter-salutation">
             <h3 className="serif-title salutation-text">
-              {config.letter.salutation.replace('you', config.recipientName || 'you')}
+              Dear {config.recipientName || "Mahi Ma'am"},
             </h3>
           </div>
 

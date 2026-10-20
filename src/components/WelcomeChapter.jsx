@@ -31,7 +31,7 @@ export default function WelcomeChapter({ config, onNextChapter }) {
 
         {/* Main Headings */}
         <h1 className="welcome-heading serif-title">
-          {config.welcome.heading}
+          Hey, {config.recipientName || "Mahi Ma'am"}. Yes, YOU. 💌
         </h1>
 
         <p className="welcome-supporting">

@@ -3,8 +3,8 @@
 export const DEFAULT_CONFIG = {
   websiteTitle: "If I Could Write Us Again",
   subtitle: "A little world I made for you.",
-  recipientName: "you",
-  recipientNickname: "you",
+  recipientName: "Mahi Ma'am",
+  recipientNickname: "Mahi Ma'am",
   senderName: "Someone who is trying to do better",
   senderSignature: "With sincerity,\nSomeone who is trying to do better.",
   senderPhone: "", // Optional WhatsApp phone number e.g. "1234567890"
@@ -13,7 +13,7 @@ export const DEFAULT_CONFIG = {
   // Chapter 1 Content
   welcome: {
     badge: "Chapter 1 of 7",
-    heading: "Hey, you. Yes, YOU. 💌",
+    heading: "Hey, Mahi Ma'am. Yes, YOU. 💌",
     supportingText: "Out of all the things I could have sent you, I decided to make you a little world instead.",
     subtext: "No pressure. No expectations. Just something I wanted you to see.",
     buttonText: "Open your little surprise ✨",
@@ -24,7 +24,7 @@ export const DEFAULT_CONFIG = {
   letter: {
     badge: "Chapter 2 of 7",
     headline: "There are some things I should have said better.",
-    salutation: "Dear you,",
+    salutation: "Dear Mahi Ma'am,",
     paragraphs: [
       "I have thought a lot about the past, about the things I did wrong, and about the ways my actions may have hurt you.",
       "I can't go back and make those moments different. I can't ask you to forget them, either.",
