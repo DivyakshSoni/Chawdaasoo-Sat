@@ -48,7 +48,10 @@ export default function FinalQuestion({ config, onRestart }) {
   };
 
   const getWhatsAppUrl = (phone, text) => {
-    const cleanPhone = phone.replace(/[^0-9]/g, '');
+    let cleanPhone = (phone || '918955791968').replace(/[^0-9]/g, '');
+    if (cleanPhone.length === 10) {
+      cleanPhone = `91${cleanPhone}`;
+    }
     const encodedText = encodeURIComponent(text);
     return `https://wa.me/${cleanPhone}?text=${encodedText}`;
   };
@@ -207,41 +210,44 @@ export default function FinalQuestion({ config, onRestart }) {
               ))}
             </div>
 
-            {/* Reconnect / WhatsApp Action */}
+            {/* Reconnect / Direct WhatsApp Action */}
             <div className="reconnect-contact-box">
-              {config.senderPhone && config.senderPhone.trim().length >= 7 ? (
-                /* Valid configured phone number: direct WhatsApp link */
-                <div>
+              <div className="message-copy-card">
+                <p className="copy-card-hint">
+                  Here is the little note prepared for you to send:
+                </p>
+                <div className="message-snippet-box">
+                  <span className="snippet-quote">“</span>
+                  <p className="snippet-text handwritten">
+                    {fq.endings.talk.whatsAppPlaceholderMessage}
+                  </p>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
                   <a
-                    href={getWhatsAppUrl(config.senderPhone, fq.endings.talk.whatsAppPlaceholderMessage)}
+                    href={getWhatsAppUrl(config.senderPhone || '918955791968', fq.endings.talk.whatsAppPlaceholderMessage)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary btn-large heart-beat-anim"
-                    style={{ textDecoration: 'none' }}
+                    style={{
+                      textDecoration: 'none',
+                      background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+                      boxShadow: '0 8px 24px -4px rgba(37, 211, 102, 0.4)',
+                      padding: '14px 28px',
+                      fontSize: '1.05rem',
+                      width: '100%',
+                      maxWidth: '360px'
+                    }}
                   >
-                    <MessageCircle size={19} />
-                    <span>{fq.endings.talk.ctaText}</span>
+                    <MessageCircle size={22} />
+                    <span>Send on WhatsApp 💌</span>
                     <ExternalLink size={16} />
                   </a>
-                  <p className="whatsapp-note">
-                    Opens WhatsApp with your pre-filled note to {config.senderName || 'him'}.
-                  </p>
-                </div>
-              ) : (
-                /* No phone number pre-configured: copyable gentle text */
-                <div className="message-copy-card">
-                  <p className="copy-card-hint">
-                    Here's a gentle note you can copy and send whenever you feel like saying hello:
-                  </p>
-                  <div className="message-snippet-box">
-                    <span className="snippet-quote">“</span>
-                    <p className="snippet-text handwritten">
-                      {fq.endings.talk.whatsAppPlaceholderMessage}
-                    </p>
-                  </div>
+
                   <button
-                    className="btn-primary"
+                    className="btn-secondary"
                     onClick={() => handleCopyMessage(fq.endings.talk.whatsAppPlaceholderMessage)}
+                    style={{ width: '100%', maxWidth: '360px' }}
                   >
                     {copied ? (
                       <>
@@ -251,15 +257,16 @@ export default function FinalQuestion({ config, onRestart }) {
                     ) : (
                       <>
                         <Copy size={18} />
-                        <span>Copy this message</span>
+                        <span>Or copy message to clipboard</span>
                       </>
                     )}
                   </button>
-                  <p className="config-tip">
-
-                  </p>
                 </div>
-              )}
+
+                <p className="whatsapp-note" style={{ marginTop: '14px', fontSize: '0.85rem', color: 'var(--ink-muted)' }}>
+                  Directly opens WhatsApp chat with <strong>+91 89557 91968</strong>.
+                </p>
+              </div>
             </div>
 
             <div className="restart-row">

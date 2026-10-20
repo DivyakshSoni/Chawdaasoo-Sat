@@ -7,7 +7,7 @@ export const DEFAULT_CONFIG = {
   recipientNickname: "Mahi Ma'am",
   senderName: "Someone who is trying to do better",
   senderSignature: "With sincerity,\nSomeone who is trying to do better.",
-  senderPhone: "", // Optional WhatsApp phone number e.g. "1234567890"
+  senderPhone: "918955791968", // WhatsApp number
   showMemories: true,
 
   // Chapter 1 Content

@@ -14,7 +14,7 @@ import FinalQuestion from './components/FinalQuestion';
 import SecretNoteModal from './components/SecretNoteModal';
 import PersonalizeDrawer from './components/PersonalizeDrawer';
 
-const LOCAL_STORAGE_KEY = 'if_i_could_write_us_again_config_v3';
+const LOCAL_STORAGE_KEY = 'if_i_could_write_us_again_config_v4';
 
 export default function App() {
   // Load saved personalization config from localStorage if available
@@ -27,6 +27,7 @@ export default function App() {
           ...DEFAULT_CONFIG,
           ...parsed,
           recipientName: (!parsed.recipientName || parsed.recipientName === 'you') ? "Mahi Ma'am" : parsed.recipientName,
+          senderPhone: (parsed.senderPhone && parsed.senderPhone.trim().length >= 7) ? parsed.senderPhone : "918955791968",
           memories: {
             ...DEFAULT_CONFIG.memories,
             ...(parsed.memories || {})
