@@ -42,11 +42,7 @@ export default function LetterChapter({ config, onNextChapter }) {
         <article className="parchment-sheet letter-sheet">
           {/* Decorative postal stamp & pressed flower in the corner */}
           <div className="letter-postmark">
-            <div className="vintage-stamp">
-              <span className="stamp-heart">🌸</span>
-              <span className="stamp-text">SPECIAL DELIVERY</span>
-              <span className="stamp-date">WITH CARE</span>
-            </div>
+
             <div className="postmark-lines">
               <span /><span /><span />
             </div>
@@ -64,8 +60,8 @@ export default function LetterChapter({ config, onNextChapter }) {
             {paragraphs.map((p, idx) => {
               const isVisible = idx < displayedParagraphs || isTypingComplete;
               return (
-                <p 
-                  key={idx} 
+                <p
+                  key={idx}
                   className={`letter-paragraph ${isVisible ? 'fade-in' : 'hidden'}`}
                 >
                   {p}
@@ -95,7 +91,7 @@ export default function LetterChapter({ config, onNextChapter }) {
           {/* Skip typewriter button */}
           {!isTypingComplete && (
             <div className="skip-typing-bar">
-              <button 
+              <button
                 className="btn-subtle"
                 onClick={handleSkipTyping}
                 aria-label="Skip typing to read full letter"
@@ -109,7 +105,7 @@ export default function LetterChapter({ config, onNextChapter }) {
 
         {/* Next Chapter CTA */}
         <div className="cta-container text-center" style={{ marginTop: '36px' }}>
-          <button 
+          <button
             className="btn-primary"
             onClick={onNextChapter}
           >
