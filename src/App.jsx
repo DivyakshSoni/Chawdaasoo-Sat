@@ -14,7 +14,7 @@ import FinalQuestion from './components/FinalQuestion';
 import SecretNoteModal from './components/SecretNoteModal';
 import PersonalizeDrawer from './components/PersonalizeDrawer';
 
-const LOCAL_STORAGE_KEY = 'if_i_could_write_us_again_config_v4';
+const LOCAL_STORAGE_KEY = 'if_i_could_write_us_again_config_v5';
 
 export default function App() {
   // Load saved personalization config from localStorage if available

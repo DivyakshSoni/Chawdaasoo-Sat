@@ -125,6 +125,65 @@ export default function FinalQuestion({ config, onRestart }) {
               </p>
             </div>
 
+            {/* Direct WhatsApp message card for Need Time */}
+            <div className="reconnect-contact-box" style={{ marginTop: '16px', marginBottom: '24px' }}>
+              <div className="message-copy-card">
+                <p className="copy-card-hint">
+                  Here is a gentle note you can send to let him know:
+                </p>
+                <div className="message-snippet-box">
+                  <span className="snippet-quote">“</span>
+                  <p className="snippet-text handwritten">
+                    {fq.endings.needTime.whatsAppPlaceholderMessage}
+                  </p>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
+                  <a
+                    href={getWhatsAppUrl(config.senderPhone || '918955791968', fq.endings.needTime.whatsAppPlaceholderMessage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary btn-large"
+                    style={{
+                      textDecoration: 'none',
+                      background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+                      boxShadow: '0 8px 24px -4px rgba(37, 211, 102, 0.4)',
+                      padding: '14px 28px',
+                      fontSize: '1.05rem',
+                      width: '100%',
+                      maxWidth: '360px'
+                    }}
+                  >
+                    <MessageCircle size={22} />
+                    <span>Send on WhatsApp 🌷</span>
+                    <ExternalLink size={16} />
+                  </a>
+
+                  <button
+                    className="btn-secondary"
+                    onClick={() => handleCopyMessage(fq.endings.needTime.whatsAppPlaceholderMessage)}
+                    style={{ width: '100%', maxWidth: '360px' }}
+                  >
+                    {copied ? (
+                      <>
+                        <Check size={18} />
+                        <span>Copied to clipboard! 🌷</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy size={18} />
+                        <span>Or copy message to clipboard</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                <p className="whatsapp-note" style={{ marginTop: '14px', fontSize: '0.85rem', color: 'var(--ink-muted)' }}>
+                  Directly opens WhatsApp chat with <strong>+91 89557 91968</strong>.
+                </p>
+              </div>
+            </div>
+
             <div className="ending-actions">
               <button
                 className="btn-secondary"
@@ -296,6 +355,65 @@ export default function FinalQuestion({ config, onRestart }) {
               <p className="ending-paragraph">
                 {fq.endings.notReady.message}
               </p>
+            </div>
+
+            {/* Direct WhatsApp message card for Not Ready */}
+            <div className="reconnect-contact-box" style={{ marginTop: '16px', marginBottom: '24px' }}>
+              <div className="message-copy-card">
+                <p className="copy-card-hint">
+                  Here is a gentle note you can send to let him know:
+                </p>
+                <div className="message-snippet-box">
+                  <span className="snippet-quote">“</span>
+                  <p className="snippet-text handwritten">
+                    {fq.endings.notReady.whatsAppPlaceholderMessage}
+                  </p>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
+                  <a
+                    href={getWhatsAppUrl(config.senderPhone || '918955791968', fq.endings.notReady.whatsAppPlaceholderMessage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary btn-large"
+                    style={{
+                      textDecoration: 'none',
+                      background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+                      boxShadow: '0 8px 24px -4px rgba(37, 211, 102, 0.4)',
+                      padding: '14px 28px',
+                      fontSize: '1.05rem',
+                      width: '100%',
+                      maxWidth: '360px'
+                    }}
+                  >
+                    <MessageCircle size={22} />
+                    <span>Send on WhatsApp 🤍</span>
+                    <ExternalLink size={16} />
+                  </a>
+
+                  <button
+                    className="btn-secondary"
+                    onClick={() => handleCopyMessage(fq.endings.notReady.whatsAppPlaceholderMessage)}
+                    style={{ width: '100%', maxWidth: '360px' }}
+                  >
+                    {copied ? (
+                      <>
+                        <Check size={18} />
+                        <span>Copied to clipboard! 🤍</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy size={18} />
+                        <span>Or copy message to clipboard</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                <p className="whatsapp-note" style={{ marginTop: '14px', fontSize: '0.85rem', color: 'var(--ink-muted)' }}>
+                  Directly opens WhatsApp chat with <strong>+91 89557 91968</strong>.
+                </p>
+              </div>
             </div>
 
             <div className="ending-actions">

@@ -222,13 +222,15 @@ export const DEFAULT_CONFIG = {
         title: "That's completely okay.",
         subheading: "Thank you for being honest with me.",
         message: "I understand that you have your own feelings and your own timeline. I won't rush you. I hope life brings you happiness and peace, whatever happens next.",
-        badge: "Honesty & Respect 🌷"
+        badge: "Honesty & Respect 🌷",
+        whatsAppPlaceholderMessage: "Hey, I saw your website. I appreciate what you wrote, but I need some more time right now. 🌷"
       },
       notReady: {
         title: "Thank you for reading something I made with care.",
         subheading: "I truly appreciate your time.",
         message: "I'm sorry for the ways I hurt you, and I respect your decision. I genuinely wish you happiness, peace, and good things ahead.",
-        badge: "Gratitude & Well Wishes 🤍"
+        badge: "Gratitude & Well Wishes 🤍",
+        whatsAppPlaceholderMessage: "Hey, thank you for making the website and for being honest. I'm not ready to try again, but I genuinely wish you the best. 🤍"
       }
     }
   },
