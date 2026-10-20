@@ -194,7 +194,7 @@ export const DEFAULT_CONFIG = {
     badge: "Chapter 7 of 7",
     headline: "Can I ask you something honestly?",
     q1: {
-      text: "Do you feel ready to forgive me someday?",
+      text: "Will you ever forgive me?",
       subtext: "You don't have to rush this, and you don't have to give me an answer you're not ready to give.",
       yesBtn: "Yes, I think I can. 💗",
       noBtn: "Not yet. I need more time. 🌷",

@@ -30,6 +30,10 @@ export default function App() {
           memories: {
             ...DEFAULT_CONFIG.memories,
             ...(parsed.memories || {})
+          },
+          finalQuestion: {
+            ...DEFAULT_CONFIG.finalQuestion,
+            ...(parsed.finalQuestion || {})
           }
         };
       }
